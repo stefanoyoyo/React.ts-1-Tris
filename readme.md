@@ -23,3 +23,5 @@ Per poter usare React, le classi devono estendere "React.component".
 
 https://stackoverflow.com/questions/48497358/reactjs-maximum-update-depth-exceeded-error
 PERCHE' NON POSSO CHIAMARE setState in un componente per cambair eil valore dello stato
+
+COME SALVARE VARIABILI 
