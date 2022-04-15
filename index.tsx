@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import { Tris } from './components/tris';
+import { Tris } from './components/tris/tris';
 import Hello from './Hello';
 import './style.css';
 

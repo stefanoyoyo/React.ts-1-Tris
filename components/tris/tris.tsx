@@ -12,12 +12,11 @@ export class Tris extends React.Component {
     /* Implementing angular *ngFor creating an array 
     having the given number of elements and then using 
     the map method on it. */
-    const els = Array(this.props.trisNumber).fill(null);
-    let html = null;
+    const els = Array(this.props.trisNumber).fill('empty');
     return  (
       <div>
         {
-          els.map(() => <button>{this.props.trisNumber}</button> )
+          els.map((el, index) => <button>{els[index]}</button> )
         }
       </div>
     )

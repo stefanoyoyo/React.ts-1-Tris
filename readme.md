@@ -22,6 +22,13 @@ Il contetto di classe è ovvimanente valido anche in javascript.
 Per poter usare React, le classi devono estendere "React.component".
 
 https://stackoverflow.com/questions/48497358/reactjs-maximum-update-depth-exceeded-error
-PERCHE' NON POSSO CHIAMARE setState in un componente per cambair eil valore dello stato
+PERCHE' NON POSSO CHIAMARE setState in un componente per cambiare lo stato del componente: 
+setState non può essere chiamato da componente perchè il suo codice, esattamente come 
+in Angular, viene eseguito in continuazione. Cambierei quindi tantissime
+volte lo stato del componente. 
+Il cambiamento di stato va fatto fare in risposta ad un evento.
 
-COME SALVARE VARIABILI 
+https://stackoverflow.com/questions/39853646/how-to-import-a-css-file-in-a-react-component
+COME AGGIUNGERE FILE CSS A COMPONENTE: per farlo semplicemente creo il file css 
+(possibilmente nella cartella del componente) e lo importo nel componente.
+ESEMPIO: import './tris.css';
