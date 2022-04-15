@@ -15,7 +15,7 @@ class App extends Component<AppProps, AppState> {
     super(props);
     this.state = {
       name: 'React',
-      trisNumber: 3
+      trisNumber: 9
     };
   }
 

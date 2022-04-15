@@ -14,7 +14,7 @@ export class Tris extends React.Component {
     the map method on it. */
     const els = Array(this.props.trisNumber).fill('empty');
     return  (
-      <div>
+      <div className="tris-grid">
         {
           els.map((el, index) => <button>{els[index]}</button> )
         }

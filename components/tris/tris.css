@@ -1,3 +1,9 @@
+.tris-grid {
+  max-width: 14em;
+  min-height: auto;
+  background-color: blue;
+}
+
 button {
   margin: 10px;
 }
