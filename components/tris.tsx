@@ -1,4 +1,5 @@
 import React=require("react");
+import './tris.css';
 
 export class Tris extends React.Component {
   props: any;
@@ -16,7 +17,7 @@ export class Tris extends React.Component {
     return  (
       <div>
         {
-          els.map(el => <button>{this.props.trisNumber}</button> )
+          els.map(() => <button>{this.props.trisNumber}</button> )
         }
       </div>
     )
