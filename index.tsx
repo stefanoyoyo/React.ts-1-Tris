@@ -7,13 +7,15 @@ import './style.css';
 interface AppProps { }
 interface AppState {
   name: string;
+  trisNumber: number
 }
 
 class App extends Component<AppProps, AppState> {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'React'
+      name: 'React',
+      trisNumber: 3
     };
   }
 
@@ -24,7 +26,7 @@ class App extends Component<AppProps, AppState> {
         <p>
           Start editing to see some magic happen :)
         </p>
-      <Tris trisNumber="3"/>
+      <Tris trisNumber={this.state.trisNumber}/>
       </div>
     );
   }
