@@ -1,13 +1,13 @@
 import React=require("react");
 
 export class Tris extends React.Component {
-  props: unknown;
+  props: any;
 
   constructor(props) {
     super(props);
   }
 
   render() {
-    return <button>ciao</button>
+    return <button>{this.props.trisNumber}</button>
   }
 }
