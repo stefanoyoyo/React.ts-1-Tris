@@ -20,3 +20,6 @@ Uno di questi componenti può contenere:
 Io personalmente preferisco creare i componenti usando le classi.
 Il contetto di classe è ovvimanente valido anche in javascript.
 Per poter usare React, le classi devono estendere "React.component".
+
+https://stackoverflow.com/questions/48497358/reactjs-maximum-update-depth-exceeded-error
+PERCHE' NON POSSO CHIAMARE setState in un componente per cambair eil valore dello stato

@@ -8,6 +8,7 @@ interface AppProps { }
 interface AppState {
   name: string;
   trisNumber: number
+  changeNumber: object
 }
 
 class App extends Component<AppProps, AppState> {
@@ -15,7 +16,8 @@ class App extends Component<AppProps, AppState> {
     super(props);
     this.state = {
       name: 'React',
-      trisNumber: 3
+      trisNumber: 3,
+      changeNumber: () => { this.setState(props); }
     };
   }
 
