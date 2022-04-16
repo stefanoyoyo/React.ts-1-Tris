@@ -3,6 +3,7 @@ import './square.css'
 
 export interface AppProps {
   squareText: string,
+  squareId: number,
   changeText: Function
 }
 export interface AppState{}
@@ -14,7 +15,7 @@ export class Square extends React.Component<AppProps, AppState> {
 
   render() {
     return(
-      <button onClick={() => this.props.changeText(2)} >{this.props.squareText}</button>
+      <button onClick={() => this.props.changeText(this.props.squareId)} >{this.props.squareText}</button>
     )
   }
 }
