@@ -25,7 +25,7 @@ export class Tris extends React.Component<AppProps, AppState> {
     /* Implementing angular *ngFor creating an array 
     having the given number of elements and then using 
     the map method on it. */
-    this.trisGrid = Array(this.props.trisNumber).fill('ciao');
+    this.trisGrid = Array(this.props.trisNumber).fill('');
     return  (
       <div className="tris-grid">
         {
