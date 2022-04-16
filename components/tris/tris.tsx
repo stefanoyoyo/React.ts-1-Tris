@@ -1,7 +1,13 @@
 import React=require("react");
+import { Square } from "../square/square";
 import './tris.css';
 
-export class Tris extends React.Component {
+export interface AppProps {
+  squareText: string
+}
+export interface AppState{}
+
+export class Tris extends React.Component<AppProps, AppState> {
   props: any;
 
   constructor(props) {
@@ -16,7 +22,7 @@ export class Tris extends React.Component {
     return  (
       <div className="tris-grid">
         {
-          els.map((el, index) => <button className="square">{els[index]}</button> )
+          els.map((el, index) => <Square squareText="ciao" /> )
         }
       </div>
     )

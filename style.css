@@ -1,3 +1,10 @@
 h1, p {
   font-family: Lato;
 }
+
+:root {
+  /**GLOBAL VARIABLES */
+  --square-width: 3em;
+  --square-height: 3em;
+  --row-elements-number: 3;
+}

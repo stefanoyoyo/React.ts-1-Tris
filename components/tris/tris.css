@@ -1,9 +1,4 @@
-:root {
-  /**VARIABLES */
-  --square-width: 3em;
-  --square-height: 3em;
-  --row-elements-number: 3;
-}
+
 
 
 .tris-grid {
@@ -12,11 +7,6 @@
   background-color: blue;
   margin: auto;
   border: solid 3px;
-}
-
-.square {
-  height: var(--square-height);
-  border: solid 2px
 }
 
 button {

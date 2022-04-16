@@ -1,0 +1,4 @@
+.square {
+  height: var(--square-height);
+  border: solid 2px
+}
