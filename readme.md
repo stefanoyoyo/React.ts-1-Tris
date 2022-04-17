@@ -59,4 +59,14 @@ Per farlo, il testo deve essere salvato in uno state. Al cambiamento (cioè al c
 Se il cambiamento venisse applicato ad un altro oggetto, il quadrato cliccato continuerebbe a mostrare stringa vuota.
 
 
+-----17/04/2022-----
+
+RIASSUNTO DELLE COSE CAPITE: 
+ • un componente può usare sia valori salvati in oggetti normali che nell'oggetto state, solo che notifica al componente del nuovo valore da visualizzare avviene solo nel secondo caso.
+ • l'oggetto state può essere assegnato solo nel costruttore, altrove può essere modificato solo con il metodo setState. Questo metodo consente solo di riassegnare lo state con un nuovo oggetto di tipo state passato come parametro. 
+ Il metodo setState può essere chiamato solo al trigger di un evento, non nel metodo render o in altri metodi del componente: se fatto, react darà errore, indicando che lo state viene cambiato all'infinito. Questo perchè lo state è continuamente alterato. 
+ ESEMPIO: nel tris, lo stato della partita è salvato nello state del padre. Il figlio square cambia lo stato del padre accedendo allo state del padre e cambiandone il valore. Di preciso, square cambia il valore dell'elemento iseimo in base al suo id. 
+ • 
+ • 
+
 
