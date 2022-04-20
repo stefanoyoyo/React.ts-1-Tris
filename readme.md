@@ -67,6 +67,23 @@ RIASSUNTO DELLE COSE CAPITE:
  Il metodo setState può essere chiamato solo al trigger di un evento, non nel metodo render o in altri metodi del componente: se fatto, react darà errore, indicando che lo state viene cambiato all'infinito. Questo perchè lo state è continuamente alterato. 
  ESEMPIO: nel tris, lo stato della partita è salvato nello state del padre. Il figlio square cambia lo stato del padre accedendo allo state del padre e cambiandone il valore. Di preciso, square cambia il valore dell'elemento iseimo in base al suo id. 
  • 
- • 
+ •
+
+ -----19/04/2022-----
+
+ REACT HOOKS: gli hooks in react sono degli strumenti che vengono messi a disposizione dalla libreria. Essi si possono usare solo in componenti di tipo funzione.
+
+USE STATE: questo hook serve a replicare il comportamento di state dei componenti di tipo class, ma all'interno di componenti di tipo function. 
+Si usa chiamando usando la funzione useState, che restituisce sempre un Array di due elementi. Il primo è lo stato ed il secondo è una funzione setter da usare per modificare lo stato
+Richiedono lo destructuring.
+useState accetta come parametro il valore iniziale che avrà lo state.
+È possibile chiamare N volte il metodo useState assegnandolo a tutte le coppie stato / setState che si vuole. Ognuna di queste coppie sarà uno stato per l'app, da usare nel codice HTML
+
+USE STATE CON OGGETTI: se il componente usasse un oggetto per conservare le varie componenti dello stato del componente (cioè le variabili di cui parlavo prima) bisogna accedere ai suoi campi molto semplicemente.
+
+PERCHE BISOGNA SEMPRE USARE LE LAMBDA FUNCTIONS: va fatto perché altrimenti il contenuto di una funzione normale verrebbe eseguito in continuazione. 
+
+COME FUNZIONA USESTATE CON LO STATO IN OBJECT: ogni volta che si chiama il metodo per settare lo stato, il componente viene ri renderizzato da capo, eliminando lo stato degli altri campi.
+Per evitare che ciò avvenga bisogna usare l'operatore spread nel metodo che cambia lo stato sull'array di stati ricevuti.
 
 
