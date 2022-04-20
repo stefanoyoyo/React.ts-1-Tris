@@ -1,9 +1,7 @@
-
-
-
 .tris-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
   max-width: calc((var(--square-width) * 3) + (12px * var(--row-elements-number)));
-  min-height: auto;
   background-color: blue;
   margin: auto;
   border: solid 3px;
@@ -12,4 +10,4 @@
 button {
   margin: 10px;
   width: var(--square-width)
-}
+} 
