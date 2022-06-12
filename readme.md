@@ -48,8 +48,8 @@ Sospetto bene.
 
 **UTILITA' DI STATE IN REACT**: l'oggetto state in react è un oggetto particolare
 che permette di conservare i valori che deve utilizzare un componente. 
-DEFINIZIONE: What is state in React? The state is a built-in React object that is used to contain data or information about the component. A component's state can change over time; whenever it changes, the component re-renders. 
-A COSA SERVE: l'utilità di questo oggetto è quella che, ad ogni cambiamento, renderizza (ricarica) nuovamente il componente. Questo permette di fare in modo che il componente possa visualizzare il cambiamento della variabile appena avviene. 
+***DEFINIZIONE:*** What is state in React? The state is a built-in React object that is used to contain data or information about the component. A component's state can change over time; whenever it changes, the component re-renders. 
+***A COSA SERVE:*** l'utilità di questo oggetto è quella che, ad ogni cambiamento, renderizza (ricarica) nuovamente il componente. Questo permette di fare in modo che il componente possa visualizzare il cambiamento della variabile appena avviene. 
 Un componente può anche visualizzare/accedere anche ai valori salvati in qualsiasi altro oggetto javascript. Il problema è però che quando cambia il valore di quegli oggetti, il componente non se ne accorge.  
 **ESEMPIO:** nel tris, ogni quadrato è un componente di tipo square che visualizza il contenuto passato come prop dal componente tris. 
 I quadrati di default non mostrano niente.
