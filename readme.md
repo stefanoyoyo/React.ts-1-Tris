@@ -22,7 +22,7 @@ Il concetto di classe è ovvimanente valido anche in javascript.
 Per poter usare React, le classi devono estendere "React.component".
 
 https://stackoverflow.com/questions/48497358/reactjs-maximum-update-depth-exceeded-error
-**PERCHE' NON POSSO CHIAMARE setState in un componente per cambiare lo stato del componente:**
+**PERCHE' NON POSSO CHIAMARE setState IN UN COMPONENTE PER CAMBIARE LO STATO DEL COMPONENTE:**
 setState non può essere chiamato da componente perchè il suo codice, esattamente come
 in Angular, viene eseguito in continuazione. Cambierei quindi tantissime
 volte lo stato del componente.
