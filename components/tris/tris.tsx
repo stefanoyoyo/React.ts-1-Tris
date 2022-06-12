@@ -12,19 +12,17 @@ export interface AppState {
 }
 
 export class Tris extends React.Component<AppProps, AppState> {
-  props: any;
 
   constructor(props) {
     super(props);
     this.state = {
       trisGrid: Array(props.trisNumber).fill('')
     }
-    console.log(this.state)
   }
 
   changeText(index: number) {
     let trisGrid = Object.assign(this.state.trisGrid);
-    trisGrid[index] = 'x';
+    trisGrid[index] = this.props.squareText;
     this.setState({
       trisGrid: trisGrid
     });

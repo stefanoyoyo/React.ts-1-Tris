@@ -11,7 +11,7 @@ normalissimi elementi html che i componenti realizzabili in react.
 Questi elementi XML sono poi usati dalla libreria per definire come
 javascript dovrà creare gli elementi sul DOM.
 
-CREAZIONE COMPONENTI: la struttura del progetto prevede la creazione
+**CREAZIONE COMPONENTI:** la struttura del progetto prevede la creazione
 di una cartella dove inserirò i file javascript di ogni componente.
 Ogni file contenente un componente deve avere estensione "jsx" o "tsx".
 Uno di questi componenti può contenere:
@@ -22,20 +22,20 @@ Il concetto di classe è ovvimanente valido anche in javascript.
 Per poter usare React, le classi devono estendere "React.component".
 
 https://stackoverflow.com/questions/48497358/reactjs-maximum-update-depth-exceeded-error
-PERCHE' NON POSSO CHIAMARE setState in un componente per cambiare lo stato del componente:
+**PERCHE' NON POSSO CHIAMARE setState in un componente per cambiare lo stato del componente:**
 setState non può essere chiamato da componente perchè il suo codice, esattamente come
 in Angular, viene eseguito in continuazione. Cambierei quindi tantissime
 volte lo stato del componente.
 Il cambiamento di stato va fatto fare in risposta ad un evento.
 
 https://stackoverflow.com/questions/39853646/how-to-import-a-css-file-in-a-react-component
-COME AGGIUNGERE FILE CSS A COMPONENTE: per farlo semplicemente creo il file css
+**COME AGGIUNGERE FILE CSS A COMPONENTE:** per farlo semplicemente creo il file css
 (possibilmente nella cartella del componente) e lo importo nel componente.
 ESEMPIO: import './tris.css';
 
 -----16/04/2022-----
 
-DIFFERENZA TRA IL PASSARE UNA FUNZIONE ED UNA LAMBDA CHE CHIAMA UNA FUNZIONE AD UN EVENTO: per qualche motivo, se passo una funzione direttamente succede che viene chiamata automatcamente, anche se l'evento (click di un bottone ad esempio) non viene triggerato.
+**DIFFERENZA TRA IL PASSARE UNA FUNZIONE ED UNA LAMBDA CHE CHIAMA UNA FUNZIONE AD UN EVENTO:** per qualche motivo, se passo una funzione direttamente succede che viene chiamata automatcamente, anche se l'evento (click di un bottone ad esempio) non viene triggerato.
 Bisogna quindi SEMPRE passare una funzione ad un evento come l'esecuzione di una lambda.
 ESEMPIO: se in questo codice passo la funzione senza usare la lambda, viene eseguita automaticamente anche senza schiacciare uno dei bottoni.
 In questo caso, succede che viene scritto "X" nel bottone in automatico.  
@@ -43,10 +43,10 @@ In questo caso, succede che viene scritto "X" nel bottone in automatico.
 changeText={() => this.changeText(index)}
 squareText={this.trisGrid[index]} />
 
-IL CAMBIO DI STATO DEL FIGLIO NON AVVIENE: sospetto che sia a causa del fatto che non ho inserito il valore da visualizzare nel bottone all'interno dello state. 
+**IL CAMBIO DI STATO DEL FIGLIO NON AVVIENE:** sospetto che sia a causa del fatto che non ho inserito il valore da visualizzare nel bottone all'interno dello state. 
 Sospetto bene. 
 
-UTILITA' DI STATE IN REACT: l'oggetto state in react è un oggetto particolare
+**UTILITA' DI STATE IN REACT**: l'oggetto state in react è un oggetto particolare
 che permette di conservare i valori che deve utilizzare un componente. 
 DEFINIZIONE: What is state in React? The state is a built-in React object that is used to contain data or information about the component. A component's state can change over time; whenever it changes, the component re-renders. 
 A COSA SERVE: l'utilità di questo oggetto è quella che, ad ogni cambiamento, renderizza (ricarica) nuovamente il componente. Questo permette di fare in modo che il componente possa visualizzare il cambiamento della variabile appena avviene. 
@@ -71,25 +71,25 @@ Se il cambiamento venisse applicato ad un altro oggetto, il quadrato cliccato co
 
  -----19/04/2022-----
 
- REACT HOOKS: gli hooks in react sono degli strumenti che vengono messi a disposizione dalla libreria. Essi si possono usare solo in componenti di tipo funzione.
+ **REACT HOOKS**: gli hooks in react sono degli strumenti che vengono messi a disposizione dalla libreria. Essi si possono usare solo in componenti di tipo funzione.
 
-USE STATE: questo hook serve a replicare il comportamento di state dei componenti di tipo class, ma all'interno di componenti di tipo function. 
+**USE STATE**: questo hook serve a replicare il comportamento di state dei componenti di tipo class, ma all'interno di componenti di tipo function. 
 Si usa chiamando usando la funzione useState, che restituisce sempre un Array di due elementi. Il primo è lo stato ed il secondo è una funzione setter da usare per modificare lo stato
 Richiedono lo destructuring.
 useState accetta come parametro il valore iniziale che avrà lo state.
 È possibile chiamare N volte il metodo useState assegnandolo a tutte le coppie stato / setState che si vuole. Ognuna di queste coppie sarà uno stato per l'app, da usare nel codice HTML
 
-USE STATE CON OGGETTI: se il componente usasse un oggetto per conservare le varie componenti dello stato del componente (cioè le variabili di cui parlavo prima) bisogna accedere ai suoi campi molto semplicemente.
+**USE STATE CON OGGETTI**: se il componente usasse un oggetto per conservare le varie componenti dello stato del componente (cioè le variabili di cui parlavo prima) bisogna accedere ai suoi campi molto semplicemente.
 
-PERCHE BISOGNA SEMPRE USARE LE LAMBDA FUNCTIONS: va fatto perché altrimenti il contenuto di una funzione normale verrebbe eseguito in continuazione. 
+**PERCHE BISOGNA SEMPRE USARE LE LAMBDA FUNCTIONS**: va fatto perché altrimenti il contenuto di una funzione normale verrebbe eseguito in continuazione. 
 In particolare ho scoperto che per qualche motivo, le funzioni lambda sono sempre bindate a this, mentre i metodi no. Devono essere bindati automaticamente.
 
-COME FUNZIONA USESTATE CON LO STATO IN OBJECT: ogni volta che si chiama il metodo per settare lo stato, il componente viene ri renderizzato da capo, eliminando lo stato degli altri campi.
+**COME FUNZIONA USESTATE CON LO STATO IN OBJECT**: ogni volta che si chiama il metodo per settare lo stato, il componente viene ri renderizzato da capo, eliminando lo stato degli altri campi.
 Per evitare che ciò avvenga bisogna usare l'operatore spread nel metodo che cambia lo stato sull'array di stati ricevuti.
 
 -----12/06/2022-----
 
-PASSAGGIO DI UN VALORE NELL'OGGETTO STATE AD UN COMPONENTE FIGLIO: non funziona. 
+**PASSAGGIO DI UN VALORE NELL'OGGETTO STATE AD UN COMPONENTE FIGLIO**: non funziona. 
 ESEMPIO: 
 #region esempio
   render() {
@@ -106,19 +106,57 @@ ESEMPIO:
   }
 #endregion
 
-ACCESSO ALLE PROPS CON THIS NON VA BENE: nel costruttore non posso accedere alle props usando this.
+**QUANDO ACCEDERE ALLE PROPS CON THIS**: nel costruttore non posso accedere alle props usando this.
 Vado in eccezione.
-Lo potrei fare solo se salvassi le props in una variabile.
-#region esempio
+Posso però farlo nei metodo chiamati dal metodo render!
+**#region esempio**
+import React = require('react');
+import { Square } from '../square/square';
+import './tris.css';
+
+export interface AppProps {
+  squareText: string;
+  trisNumber: number;
+  changeText: Function;
+}
+export interface AppState {
+  trisGrid: string[]
+}
+
 export class Tris extends React.Component<AppProps, AppState> {
-  props: any;
 
   constructor(props) {
     super(props);
     this.state = {
-      trisGrid: Array(props.trisNumber).fill('') // Se scrivessi this.props.trisNumber si romperebbe tutto
+      trisGrid: Array(props.trisNumber).fill('')
     }
-    console.log(this.state)
+  }
+
+  changeText(index: number) {
+    let trisGrid = Object.assign(this.state.trisGrid);
+    trisGrid[index] = this.props.squareText;
+    this.setState({
+      trisGrid: trisGrid
+    });
+    console.log(this.state.trisGrid);
+  }
+
+  render() {
+    /* Implementing angular *ngFor creating an array 
+    having the given number of elements and then using 
+    the map method on it. */
+    return (
+      <div className="tris-grid">
+        {this.state.trisGrid.map((el, index) => (
+          <Square
+            squareText={this.state.trisGrid[index]}
+            changeText={(index) => this.changeText(index)}
+            squareId={index}
+          />
+        ))}
+      </div>
+    );
   }
 }
-#endregion
+
+**#endregion**

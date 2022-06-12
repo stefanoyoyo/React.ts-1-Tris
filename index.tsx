@@ -29,7 +29,7 @@ class App extends Component<AppProps, AppState> {
         </p> 
       <Tris 
         trisNumber={this.state.trisNumber} 
-        squareText="x"
+        squareText="y"
       />  
       </div>
     );
