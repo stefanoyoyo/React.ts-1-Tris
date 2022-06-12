@@ -4,6 +4,7 @@ import './tris.css';
 
 export interface AppProps {
   squareText: string;
+  trisNumber: number;
   changeText: Function;
 }
 export interface AppState {
@@ -15,9 +16,8 @@ export class Tris extends React.Component<AppProps, AppState> {
 
   constructor(props) {
     super(props);
-    console.log(props)
     this.state = {
-      trisGrid: Array(this.props.trisNumber).fill('')
+      trisGrid: Array(props.trisNumber).fill('')
     }
     console.log(this.state)
   }

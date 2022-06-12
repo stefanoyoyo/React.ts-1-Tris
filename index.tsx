@@ -20,13 +20,17 @@ class App extends Component<AppProps, AppState> {
   }
 
   render() {
-    return (
+    console.log(this.state);                
+    return (      
       <div>
         <Hello name={this.state.name} />
         <p>
           Start editing to see some magic happen :)
-        </p>
-      <Tris trisNumber={this.state.trisNumber}/>
+        </p> 
+      <Tris 
+        trisNumber={this.state.trisNumber} 
+        squareText="x"
+      />  
       </div>
     );
   }

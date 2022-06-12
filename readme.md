@@ -18,7 +18,7 @@ Uno di questi componenti può contenere:
 • funzioni;
 • classi;
 Io personalmente preferisco creare i componenti usando le classi.
-Il contetto di classe è ovvimanente valido anche in javascript.
+Il concetto di classe è ovvimanente valido anche in javascript.
 Per poter usare React, le classi devono estendere "React.component".
 
 https://stackoverflow.com/questions/48497358/reactjs-maximum-update-depth-exceeded-error
@@ -61,7 +61,7 @@ Se il cambiamento venisse applicato ad un altro oggetto, il quadrato cliccato co
 
 -----17/04/2022-----
 
-RIASSUNTO DELLE COSE CAPITE: 
+**RIASSUNTO DELLE COSE CAPITE:**
  • un componente può usare sia valori salvati in oggetti normali che nell'oggetto state, solo che notifica al componente del nuovo valore da visualizzare avviene solo nel secondo caso.
  • l'oggetto state può essere assegnato solo nel costruttore, altrove può essere modificato solo con il metodo setState. Questo metodo consente solo di riassegnare lo state con un nuovo oggetto di tipo state passato come parametro. 
  Il metodo setState può essere chiamato solo al trigger di un evento, non nel metodo render o in altri metodi del componente: se fatto, react darà errore, indicando che lo state viene cambiato all'infinito. Questo perchè lo state è continuamente alterato. 
@@ -82,8 +82,43 @@ useState accetta come parametro il valore iniziale che avrà lo state.
 USE STATE CON OGGETTI: se il componente usasse un oggetto per conservare le varie componenti dello stato del componente (cioè le variabili di cui parlavo prima) bisogna accedere ai suoi campi molto semplicemente.
 
 PERCHE BISOGNA SEMPRE USARE LE LAMBDA FUNCTIONS: va fatto perché altrimenti il contenuto di una funzione normale verrebbe eseguito in continuazione. 
+In particolare ho scoperto che per qualche motivo, le funzioni lambda sono sempre bindate a this, mentre i metodi no. Devono essere bindati automaticamente.
 
 COME FUNZIONA USESTATE CON LO STATO IN OBJECT: ogni volta che si chiama il metodo per settare lo stato, il componente viene ri renderizzato da capo, eliminando lo stato degli altri campi.
 Per evitare che ciò avvenga bisogna usare l'operatore spread nel metodo che cambia lo stato sull'array di stati ricevuti.
 
+-----12/06/2022-----
 
+PASSAGGIO DI UN VALORE NELL'OGGETTO STATE AD UN COMPONENTE FIGLIO: non funziona. 
+ESEMPIO: 
+#region esempio
+  render() {
+    console.log(this.state.trisNumber);                 // 9
+    return (      
+      <div>
+        <Hello name={this.state.name} />
+        <p>
+          Start editing to see some magic happen :)
+        </p> 
+      <Tris trisNumber={this.state.trisNumber}/>      // Error: Cannot read properties of undefined (reading 'trisNumber')
+      </div>
+    );
+  }
+#endregion
+
+ACCESSO ALLE PROPS CON THIS NON VA BENE: nel costruttore non posso accedere alle props usando this.
+Vado in eccezione.
+Lo potrei fare solo se salvassi le props in una variabile.
+#region esempio
+export class Tris extends React.Component<AppProps, AppState> {
+  props: any;
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      trisGrid: Array(props.trisNumber).fill('') // Se scrivessi this.props.trisNumber si romperebbe tutto
+    }
+    console.log(this.state)
+  }
+}
+#endregion
