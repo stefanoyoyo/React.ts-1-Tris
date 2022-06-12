@@ -12,6 +12,7 @@ export interface AppState {
 }
 
 export class Tris extends React.Component<AppProps, AppState> {
+  props: any;
 
   constructor(props) {
     super(props);

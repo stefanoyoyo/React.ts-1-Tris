@@ -1,4 +1,4 @@
------15/04/2022-----
+*-----15/04/2022-----*
 
 https://it.reactjs.org/tutorial/tutorial.html
 In questo progetto inizio ad imparare come creare un'app react.
@@ -33,7 +33,7 @@ https://stackoverflow.com/questions/39853646/how-to-import-a-css-file-in-a-react
 (possibilmente nella cartella del componente) e lo importo nel componente.
 ESEMPIO: import './tris.css';
 
------16/04/2022-----
+*-----16/04/2022-----*
 
 **DIFFERENZA TRA IL PASSARE UNA FUNZIONE ED UNA LAMBDA CHE CHIAMA UNA FUNZIONE AD UN EVENTO:** per qualche motivo, se passo una funzione direttamente succede che viene chiamata automatcamente, anche se l'evento (click di un bottone ad esempio) non viene triggerato.
 Bisogna quindi SEMPRE passare una funzione ad un evento come l'esecuzione di una lambda.
@@ -59,7 +59,7 @@ Per farlo, il testo deve essere salvato in uno state. Al cambiamento (cioè al c
 Se il cambiamento venisse applicato ad un altro oggetto, il quadrato cliccato continuerebbe a mostrare stringa vuota.
 
 
------17/04/2022-----
+*-----17/04/2022-----*
 
 **RIASSUNTO DELLE COSE CAPITE:**
  • un componente può usare sia valori salvati in oggetti normali che nell'oggetto state, solo che notifica al componente del nuovo valore da visualizzare avviene solo nel secondo caso.
@@ -69,7 +69,7 @@ Se il cambiamento venisse applicato ad un altro oggetto, il quadrato cliccato co
  • 
  •
 
- -----19/04/2022-----
+ *-----19/04/2022-----*
 
  **REACT HOOKS**: gli hooks in react sono degli strumenti che vengono messi a disposizione dalla libreria. Essi si possono usare solo in componenti di tipo funzione.
 
@@ -87,7 +87,7 @@ In particolare ho scoperto che per qualche motivo, le funzioni lambda sono sempr
 **COME FUNZIONA USESTATE CON LO STATO IN OBJECT**: ogni volta che si chiama il metodo per settare lo stato, il componente viene ri renderizzato da capo, eliminando lo stato degli altri campi.
 Per evitare che ciò avvenga bisogna usare l'operatore spread nel metodo che cambia lo stato sull'array di stati ricevuti.
 
------12/06/2022-----
+*-----12/06/2022-----*
 
 **PASSAGGIO DI UN VALORE NELL'OGGETTO STATE AD UN COMPONENTE FIGLIO**: non funziona. 
 ESEMPIO: 
